@@ -203,9 +203,9 @@ class PlaneGame(object):
         enemy_bullets_num = pygame.sprite.spritecollide(self.hero, enemy_bullets, True)
         if len(enemy_bullets_num) > 0:
             self.hero.kill()
-            global GAME_STATUS
+            # global GAME_STATUS
             GAME_STATUS= 0
-            global END_TIME
+            # global END_TIME
             END_TIME = pygame.time.get_ticks()
             for ene_i in enemy_bullets_num:
                 expl = Explosion(ene_i.rect.center,'hero')
